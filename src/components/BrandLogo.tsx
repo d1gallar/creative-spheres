@@ -11,9 +11,9 @@ export default function BrandLogo({theme="light", className}: BrandLogoProps) {
   return (
     <Link className={`min-w-fit h-10 w-fit hover:cursor-pointer ${className}`} href="/">
       {theme === "light" ? (
-        <Image src="./BrandLogo.svg" className="h-full w-auto" height="56" width="227" alt="Creative Spheres Logo" />
+        <Image src="/BrandLogo.svg" priority={true} loading="eager" className="h-full w-auto" height="56" width="227" alt="Creative Spheres Logo" />
       ):(
-        <Image src="./BrandLogoDark.svg" className="h-full w-auto" height="56" width="227" alt="Creative Spheres Logo" />
+        <Image src="/BrandLogoDark.svg" priority={true} loading="eager" className="h-full w-auto" height="56" width="227" alt="Creative Spheres Logo" />
       )}
     </Link>
   );

@@ -4,6 +4,7 @@ import React from "react";
 import HorizontalBox from "./HorizontalBox";
 import VerticalBox from "./VerticalBox";
 import DiagonalArrowIcon from "./DiagonalArrowIcon";
+import Image from "next/image";
 
 type ProjectCardProps = {
   link: string;
@@ -24,9 +25,11 @@ export default function ProjectCard(props: ProjectCardProps) {
         <div className="w-full h-[250px] bg-[#3E3E3E] rounded-md"></div>
       ) : (
         /* trunk-ignore(eslint/@next/next/no-img-element) */
-        <img
+        <Image
           src={`${img}`}
-          className="w-full h-[250px] rounded-md object-cover"
+          className="w-full h-[250px] rounded-md object-cover aspect-auto"
+          width="300"
+          height="250"
           alt={`${name}`}
         />
       )}
@@ -39,7 +42,11 @@ export default function ProjectCard(props: ProjectCardProps) {
             {description}
           </p>
         </VerticalBox>
-        <span className={`h-fit w-fit border-2 p-1 rounded-full ${theme === "dark" ? "border-white" : "border-black"}`}>
+        <span
+          className={`h-fit w-fit border-2 p-1 rounded-full ${
+            theme === "dark" ? "border-white" : "border-black"
+          }`}
+        >
           {theme === "dark" ? (
             <DiagonalArrowIcon theme="dark" className="w-6 h-6" />
           ) : (

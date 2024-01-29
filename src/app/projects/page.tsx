@@ -21,28 +21,28 @@ export default function ProjectsPage() {
                 name="Synchro"
                 description="Logo Branding"
                 theme="light"
-                img={"./projectOne.png"}
+                img={"/projectOne.png"}
               />
               <ProjectCard
                 link="#"
                 name="Chroma"
                 description="UI Design"
                 theme="light"
-                img={"./projectTwo.png"}
+                img={"/projectTwo.png"}
                 />
               <ProjectCard
                 link="#"
                 name="Resume"
                 description="UX Design"
                 theme="light"
-                img={"./projectThree.png"}
+                img={"/projectThree.png"}
                 />
               <ProjectCard
                 link="#"
                 name="Harmony"
                 description="Iconography"
                 theme="light"
-                img={"./projectFour.png"}
+                img={"/projectFour.png"}
               />
             </div>
           </FadeIn>

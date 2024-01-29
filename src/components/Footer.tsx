@@ -31,7 +31,7 @@ const FooterGroup = (props: FooterGroupProps) => {
             <li key={uuidv4().toString()}>
               <Link
                 href={link}
-                className="text-[#A5A5A5] font-medium text-sm sm:text-base hover:text-black cursor-pointer"
+                className="text-[#484848] font-medium text-sm sm:text-base hover:text-black cursor-pointer"
               >
                 {label}
               </Link>

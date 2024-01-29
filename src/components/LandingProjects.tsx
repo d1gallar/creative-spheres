@@ -17,28 +17,28 @@ export default function LandingProjectsSection() {
           name="Synchro"
           description="Logo Branding"
           theme="dark"
-          img={"./projectOne.png"}
+          img={"/projectOne.png"}
         />
         <ProjectCard
           link="#"
           name="Chroma"
           description="UI Design"
           theme="dark"
-          img={"./projectTwo.png"}
+          img={"/projectTwo.png"}
         />
         <ProjectCard
           link="#"
           name="Resume"
           description="UX Design"
           theme="dark"
-          img={"./projectThree.png"}
+          img={"/projectThree.png"}
         />
         <ProjectCard
           link="#"
           name="Harmony"
           description="Iconography"
           theme="dark"
-          img={"./projectFour.png"}
+          img={"/projectFour.png"}
         />
       </div>
     </section>
