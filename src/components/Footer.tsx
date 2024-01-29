@@ -3,7 +3,6 @@
 import React from "react";
 import BrandLogo from "./BrandLogo";
 import { v4 as uuidv4 } from "uuid";
-import { useNavigation } from "@/hooks/useNavigation";
 import Link from "next/link";
 
 type FooterLink = {
