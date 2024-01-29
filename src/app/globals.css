@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    top: 120%;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  @font-face {
+    font-family: "UberMove-Bold";
+    src: local("UberMove-Bold"),
+      url("/fonts/UberMove/UberMove-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "UberMove-Light";
+    src: local("UberMove-Light"),
+      url("/fonts/UberMove/UberMove-Light.ttf") format("truetype");
+    font-weight: light;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "UberMove-Medium";
+    src: local("UberMove-Medium"),
+      url("/fonts/UberMove/UberMove-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "UberMove-Regular";
+    src: local("UberMove-Regular"),
+      url("/fonts/UberMove/UberMove-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SuisseIntl-Regular";
+    src: url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot");
+    src: url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.svg#SuisseIntl-Regular")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "SuisseIntl-Light";
+    src: url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.eot");
+    src: url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/03d5b20d124cd26dc873bd4a8e42313e.svg#SuisseIntl-Light")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "SuisseIntl-Medium";
+    src: url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.eot");
+    src: url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/c446362802681bacaacbad0f39bfc1a5.svg#SuisseIntl-Medium")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "SuisseIntl-SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.eot");
+    src: url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/653d9381828e9577fb1e417dc047f89d.svg#SuisseIntl-SemiBold")
+        format("svg");
+  }
+
+  @font-face {
+    font-family: "SuisseIntl-Bold";
+    src: url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.eot");
+    src: url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/d1a580023d40c546276decde1c711e60.svg#SuisseIntl-Bold")
+        format("svg");
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
